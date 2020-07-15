@@ -1,1 +1,24 @@
-<h1>Inside Product</h1>
+<div class="row" style="border: 1px solid red; padding: auto;">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+        <img src={{product.img}} alt="Product Image">
+    </div>
+    <div>
+        <h1>{{product.name}}</h1>
+        <h1>Avaibility is around {{product.availbility}}</h1>
+        <h1>Product Description {{product.desc}}</h1>
+        <h1>Reviews : {{product.review}}</h1>
+        <button class="btn btn-primary" (click)="cart()">Add To Cart</button>
+        <button class="p-2 btn btn-primary" routerLink="/cart">View Cart</button>
+    </div>
+</div>
+<!-- 
+products = [{name : 'lasercut',
+img:"/assets/images/img1.png",
+cost: 20, 
+availbility: 20,
+review:"Very Good Product",
+specs:"Laser cut engraved both sides", 
+Rating: 4.7,
+deliveryTime: 2,
+warranty: 6
+} -->

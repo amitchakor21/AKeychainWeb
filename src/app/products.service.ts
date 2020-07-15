@@ -13,7 +13,8 @@ export class ProductsService {
   specs:"Laser cut engraved both sides", 
   Rating: 4.7,
   deliveryTime: 2,
-  warranty: 6
+  warranty: 6,
+  qty: 1
   }
   ,
   {name : 'wirecut',img:"/assets/images/img2.png",
@@ -23,7 +24,8 @@ export class ProductsService {
   specs:"wire cut engraved both sides", 
   Rating: 4.3,
   deliveryTime: 4,
-  warranty: 10
+  warranty: 10,
+  qty: 1
   }
 ]
   

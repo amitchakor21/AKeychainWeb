@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../products.service';
+import { CartService } from '../../cart.service';
+
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
@@ -11,6 +13,7 @@ export class ProductDetailComponent implements OnInit {
 
   productService = new ProductsService;
   products = this.productService.products;
+  cartService = CartService;
   productName ;
   product;
   constructor(private route: ActivatedRoute) { 
@@ -18,6 +21,7 @@ export class ProductDetailComponent implements OnInit {
     const name=this.route.snapshot.paramMap.get("product");
     console.log(name)
     this.product = this.myFilter(name)
+    // this.product = this.products.filter()
     console.log(this.product.specs);
   }
   
@@ -29,6 +33,22 @@ export class ProductDetailComponent implements OnInit {
     return 0;
   }
   
+  cart(){
+    console.log('Adding to Cart')
+    
+    //check if product already in cart
+    for(let prod of this.cartService.products){
+      if(this.product.name==prod.name)
+      {
+        alert('product is already in cart')
+        prod.qty++;
+        return;
+      }
+    }
+    this.cartService.products.push(this.product)
+    //
+    
+  }
   
   ngOnInit(): void {
     // console.log(this.route);
