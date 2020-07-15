@@ -28,11 +28,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/tailwindcss/dist/tailwind.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
+
             "production": {
               "fileReplacements": [
                 {
@@ -123,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AKeychainWeb"
+    }
+  },
+  "defaultProject": "AKeychainWeb",
+  "cli": {
+    "analytics": "9a1dfd9d-03f6-411d-b2ff-5ecb478ae1fa"
+  }
 }

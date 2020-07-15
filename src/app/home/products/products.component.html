@@ -1,0 +1,12 @@
+<div class="products container-fluid">
+    <div class="flexbox row">
+        <div class="product col-xl-4 col-lg-4 col-md-6 col-sm-8" *ngFor="let prod of products">
+            <div class="productPalet">
+                <img src={{prod.img}} alt="Image of product">
+                <h3 class="p-2">{{prod.name}}</h3>
+                <h4 class="p-2">Cost {{prod.cost}}</h4>
+                <button class="p-2 btn btn-primary" (click)="viewDetail(prod)">View Details</button>
+            </div>
+        </div>
+    </div>
+</div>
